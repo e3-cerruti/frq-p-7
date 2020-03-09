@@ -1,10 +1,16 @@
 import java.util.ArrayList;
 
-public class DogKennel {
+public class DogKennel
+{
     ArrayList<Dog> dogs;  // holds the dogs that are currently in this kennel
 
-    // addAdog() adds a new dog to the end of the list of dogs at this kennel
-    public void addAdog(Dog d)
+    public DogKennel()
+    {
+        dogs = new ArrayList<>();
+    }
+
+    // addADog() adds a new dog to the end of the list of dogs at this kennel
+    public void addADog(Dog d)
     {
         // TODO write addADog method
     }
