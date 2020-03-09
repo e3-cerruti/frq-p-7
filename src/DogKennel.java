@@ -18,7 +18,7 @@ public class DogKennel
     // find()  returns true if the argument dogName is the name of  one (or more) dogs in the kennel
     public boolean find(String dogName)
     {
-        // TOOD write find method
+        // TODO write find method
         return false;
     }
 
