@@ -36,11 +36,18 @@ class DogKennelTest {
 
     @org.junit.jupiter.api.Test
     void findChampions() {
+        ArrayList<Dog> champions = kennel.findChampions(11);
+        assertEquals(1, champions.size());
+        assertFalse(champions.contains(benji));
+    }
+
+    @org.junit.jupiter.api.Test
+    void findChampionsOffByOne() {
         ArrayList<Dog> champions = kennel.findChampions(10);
         assertEquals(2, champions.size());
         assertFalse(champions.contains(benji));
     }
-    
+
     @BeforeEach
     void setUp() {
         kennel = new DogKennel();
