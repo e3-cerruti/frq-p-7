@@ -35,6 +35,28 @@ class DogKennelTest {
     }
 
     @org.junit.jupiter.api.Test
+    void removeDuplicates() {
+        kennel.addADog(new Dog("Rin Tin Tin", 37.8, 45));
+        assertTrue(kennel.remove(rinTinTin.getName()));
+        assertFalse(kennel.remove("Astro"));
+
+        assertTrue(kennel.dogs.contains(lassie));
+        assertFalse(kennel.dogs.contains(rinTinTin));
+        assertTrue(kennel.dogs.contains(benji));
+    }
+
+    @org.junit.jupiter.api.Test
+    void removeSequentialDuplicates() {
+        kennel.addADog(new Dog("Benji", 13.2, 0));
+        assertTrue(kennel.remove(rinTinTin.getName()));
+        assertFalse(kennel.remove("Astro"));
+
+        assertTrue(kennel.dogs.contains(lassie));
+        assertFalse(kennel.dogs.contains(rinTinTin));
+        assertTrue(kennel.dogs.contains(benji));
+    }
+
+    @org.junit.jupiter.api.Test
     void findChampions() {
         ArrayList<Dog> champions = kennel.findChampions(11);
         assertEquals(1, champions.size());
