@@ -48,12 +48,11 @@ class DogKennelTest {
     @org.junit.jupiter.api.Test
     void removeSequentialDuplicates() {
         kennel.addADog(new Dog("Benji", 13.2, 0));
-        assertTrue(kennel.remove(rinTinTin.getName()));
-        assertFalse(kennel.remove("Benji"));
+        assertTrue(kennel.remove("Benji"));
 
         assertTrue(kennel.dogs.contains(lassie));
-        assertFalse(kennel.dogs.contains(rinTinTin));
-        assertTrue(kennel.dogs.contains(benji));
+        assertTrue(kennel.dogs.contains(rinTinTin));
+        assertFalse(kennel.dogs.contains(benji));
     }
 
     @org.junit.jupiter.api.Test
