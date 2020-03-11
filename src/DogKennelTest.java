@@ -58,7 +58,7 @@ class DogKennelTest {
 
     @org.junit.jupiter.api.Test
     void findChampions() {
-        ArrayList<Dog> champions = kennel.findChampions(11);
+        ArrayList<Dog> champions = kennel.findChampions(9);
         assertEquals(1, champions.size());
         assertFalse(champions.contains(benji));
     }
